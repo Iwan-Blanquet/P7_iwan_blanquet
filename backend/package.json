@@ -1,0 +1,18 @@
+{
+  "name": "backend-groupomania",
+  "version": "1.0.0",
+  "description": "backend groupomania social network",
+  "main": "server.js",
+  "repository": "https://github.com/Iwan-Blanquet/P7_iwan_blanquet.git",
+  "author": "Iwan Blanquet",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-rate-limit": "^6.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.4",
+    "password-validator": "^5.2.1",
+    "validator": "^13.7.0"
+  }
+}
