@@ -1,11 +1,12 @@
 const express = require('express');
 const path = require('path');
+const db = require('./utils/dbconfig');
 
 const app = express();
 
 const userRoutes = require('./routes/user');
-
-//Connection à BD sql
+const postRoutes = require('./routes/post');
+const commentRoutes = require('./routes/comment.js')
 
 //Autoriser toutes les origines à accéder à notre API
 app.use((req, res, next) => {
@@ -21,9 +22,6 @@ app.use(express.json());
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.use('/api/auth', userRoutes);
-
-app.use((req,res,next) =>{
-    res.status(200).json({ message: 'requête réussi !' })
-});
-
+app.use('/api/post', postRoutes);
+app.use('/api/comment', commentRoutes);
 module.exports = app;
